@@ -96,7 +96,7 @@
                         <tr>
                             <td></td>
                             <td>
-                                <asp:Button ID="pro_update" runat="server" CssClass="btn_design" Text="Update" />
+                                <asp:Button ID="pro_update" runat="server" CssClass="btn_design" Text="Update" OnClick="pro_update_Click" />
                             </td>
                             <td></td>
                             <td ><asp:Button ID="pro_cancel" runat="server" CssClass="btn_design" Text="Cancel" OnClick="pro_cancel_Click"  /></td>
@@ -106,15 +106,15 @@
                     
                 </div>
                 <div class="bottom_bottom">
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="productid" DataSourceID="SqlDataSource1">
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="productid" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                         <Columns>
                             
-                            <asp:BoundField DataField="productid" HeaderText="productid" ReadOnly="True" SortExpression="productid" />
+                            <asp:BoundField DataField="productid" HeaderText="productid" ReadOnly="True" SortExpression="productid"  />
                             <asp:BoundField DataField="productname" HeaderText="productname" SortExpression="productname" />
                             <asp:BoundField DataField="salesprice" HeaderText="salesprice" SortExpression="salesprice" />
                             <asp:BoundField DataField="availablequantity" HeaderText="availablequantity" SortExpression="availablequantity" />
                             <asp:BoundField DataField="categoryname" HeaderText="categoryname" SortExpression="categoryname" />
-                            <asp:CommandField ShowDeleteButton="false" ShowEditButton="True" ButtonType="Image" EditImageUrl="images/editicon.jpg" HeaderText="Edit" />
+                            <asp:CommandField ShowDeleteButton="false" ShowEditButton="True" ButtonType="Image" EditImageUrl="images/editicon.jpg" HeaderText="Edit"   />
                             <asp:CommandField ShowDeleteButton="True" ShowEditButton="false" HeaderText="Delete" DeleteImageUrl="images/deleteicon.png" ButtonType="Image" />
                         </Columns>
                         <HeaderStyle CssClass="gridviewheader" />

@@ -76,6 +76,15 @@ namespace ap_project {
         protected global::System.Web.UI.WebControls.Button update;
         
         /// <summary>
+        /// categoryUpdate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label categoryUpdate;
+        
+        /// <summary>
         /// cancel control.
         /// </summary>
         /// <remarks>

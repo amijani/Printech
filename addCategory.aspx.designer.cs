@@ -40,13 +40,13 @@ namespace ap_project {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// txtCategory control.
+        /// category_id control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCategory;
+        protected global::System.Web.UI.WebControls.TextBox category_id;
         
         /// <summary>
         /// Label2 control.
@@ -58,13 +58,13 @@ namespace ap_project {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// txtcatid control.
+        /// txtCategory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtcatid;
+        protected global::System.Web.UI.WebControls.TextBox txtCategory;
         
         /// <summary>
         /// add control.
@@ -74,6 +74,15 @@ namespace ap_project {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button add;
+        
+        /// <summary>
+        /// dataSaved control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label dataSaved;
         
         /// <summary>
         /// GridView1 control.

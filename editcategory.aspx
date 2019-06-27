@@ -66,7 +66,8 @@
                         </tr>  
                         <tr>
                             <td class="auto-style2">
-                                <asp:Button ID="update" runat="server" CssClass="btn_design" Text="Update" />
+                                <asp:Button ID="update" runat="server" CssClass="btn_design" Text="Update" OnClick="update_Click" />
+                                <asp:Label ID="categoryUpdate" runat="server"></asp:Label>
                             </td>
                             <td><asp:Button ID="cancel" runat="server" CssClass="btn_design" Text="Cancel" OnClick="cancel_Click"  /></td>
                         </tr>
@@ -74,12 +75,12 @@
                     
                 </div>
                 <div class="bottom_bottom">
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="categoryid" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="categoryid" DataSourceID="SqlDataSource1"  >
                         <Columns>
                             
                             <asp:BoundField DataField="categoryid" HeaderText="categoryid" ReadOnly="True" SortExpression="categoryid" />
                             <asp:BoundField DataField="categoryname" HeaderText="categoryname" SortExpression="categoryname" />
-                            <asp:CommandField ShowDeleteButton="false" ShowEditButton="True" ButtonType="Image" EditImageUrl="images/editicon.jpg" HeaderText="Edit" />
+                            <%--<asp:CommandField ShowDeleteButton="false" ShowEditButton="True" ButtonType="Image" EditImageUrl="images/editicon.jpg" HeaderText="Edit" />--%>
                             <asp:CommandField ShowDeleteButton="true" ShowEditButton="false"  ButtonType="Image" DeleteImageUrl="images/deleteicon.png" HeaderText="Delete" />
                         </Columns>
                         <HeaderStyle CssClass="gridviewheader" />
@@ -96,10 +97,7 @@
                  <asp:Parameter Name="categoryid" Type="String" />
                  <asp:Parameter Name="categoryname" Type="String" />
              </InsertParameters>
-             <UpdateParameters>
-                 <asp:Parameter Name="categoryname" Type="String" />
-                 <asp:Parameter Name="categoryid" Type="String" />
-             </UpdateParameters>
+             
          </asp:SqlDataSource>
     </form>
 </body>

@@ -56,18 +56,35 @@
             <div class="data">
                 <div class="cat_tbl">
                 <h3 >Category Details</h3>
-                <asp:GridView ID="gridview1" runat="server" HorizontalAlign="Center">
+                <asp:GridView ID="gridview1" runat="server" HorizontalAlign="Center" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False" DataKeyNames="categoryid" DataSourceID="SqlDataSource1">
                     <HeaderStyle CssClass="gridviewheader" />
                     <RowStyle CssClass="gridviewrow" />
+                    <Columns>
+                        <asp:BoundField DataField="categoryid" HeaderText="categoryid" ReadOnly="True" SortExpression="categoryid" />
+                        <asp:BoundField DataField="categoryname" HeaderText="categoryname" SortExpression="categoryname" />
+                    </Columns>
+                    <EmptyDataTemplate>
+        <div style="align-content:center;">No records found.</div>
+    </EmptyDataTemplate>
                 </asp:GridView>
                     </div>
                 <div class="pro_tbl">
                 <h3 >Product Details</h3>
-                <asp:GridView ID="gridview3" runat="server" HorizontalAlign="Center" >
+                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:PrintechConnectionString %>" SelectCommand="SELECT [productname], [availablequantity], [categoryname] FROM [product]"></asp:SqlDataSource>
+                <asp:GridView ID="gridview3" runat="server" HorizontalAlign="Center" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" >
                     <HeaderStyle CssClass="gridviewheader" />
                     <RowStyle CssClass="gridviewrow" />
+                    <Columns>
+                        <asp:BoundField DataField="productname" HeaderText="productname" SortExpression="productname" />
+                        <asp:BoundField DataField="availablequantity" HeaderText="availablequantity" SortExpression="availablequantity" />
+                        <asp:BoundField DataField="categoryname" HeaderText="categoryname" SortExpression="categoryname" />
+                    </Columns>
+                    <EmptyDataTemplate>
+        <div style="align-content:center;">No records found.</div>
+    </EmptyDataTemplate>
                 </asp:GridView>
                     </div>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PrintechConnectionString %>" SelectCommand="SELECT * FROM [category]"></asp:SqlDataSource>
             </div>
         </div>
     </form>

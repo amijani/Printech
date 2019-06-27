@@ -7,6 +7,12 @@
      <link rel="stylesheet" href="css/printech.css"/>
     <title>Login</title>
     
+     <style type="text/css">
+         .auto-style1 {
+             margin-left: 40px;
+         }
+     </style>
+    
 </head>
 <center>
 <body>
@@ -22,15 +28,21 @@
                     <td >
                         <asp:TextBox ID="username" runat="server" Width="155px" ></asp:TextBox>
                     </td>
-                    <td><asp:Button ID="login" runat="server" CssClass="btn_design" Text="Login" OnClick="lgn_Click" /></td>
+                    <td><asp:Button ID="login" runat="server" CssClass="btn_design" Text="Login" OnClick="lgn_Click" ValidationGroup="1" /></td>
+                <td>
+              <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="username" ErrorMessage="Username is required" ForeColor="Red" ValidationGroup="1"></asp:RequiredFieldValidator>
+           </td>
                 </tr>
                 <tr>
                     <td >
                         <asp:Label ID="Label4" runat="server"  Text="Password"></asp:Label>
                     </td>
-                    <td >
-                        <asp:TextBox ID="password" runat="server" Width="155px"></asp:TextBox>
+                    <td class="auto-style1" >
+                        <asp:TextBox ID="password" runat="server" Width="155px" TextMode="Password"></asp:TextBox>
                     </td>
+                    <td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="password" ErrorMessage="Password is required" ForeColor="Red" ValidationGroup="1"></asp:RequiredFieldValidator>
+            </td>
                 </tr>                
                 <tr>
                     <td ><asp:Label ID="Label7" runat="server"  Text="Don't have an Account?"></asp:Label></td>
@@ -38,8 +50,11 @@
                         <asp:Button ID="Button4" runat="server" CssClass="btn_design" Text="Sign up" OnClick="Button4_Click" />
                     </td>
                 </tr>
-            </table>       
+            </table> 
+        </table>      
+   
     </form>
 </body>
 </center>
+
 </html>

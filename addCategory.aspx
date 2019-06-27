@@ -53,29 +53,31 @@
                     <table style="width:100%; border-spacing:15px;">
                         <tr>
                             <td class="auto-style2">
-                                <asp:Label ID="Label1" runat="server" Text="Category Name"></asp:Label>
+                                <asp:Label ID="Label1" runat="server" Text="Category Id"></asp:Label>
                                 :</td>
                             <td>
-                                <asp:TextBox ID="txtCategory" runat="server" Width="162px"></asp:TextBox>
+                                <asp:TextBox ID="category_id" runat="server" Width="162px"></asp:TextBox>
                             </td>                            
                         </tr>
                         <tr>
                             <td class="auto-style2" >
-                                <asp:Label ID="Label2" runat="server" Text="Category ID"></asp:Label>
+                                <asp:Label ID="Label2" runat="server" Text="Category Name"></asp:Label>
                                 :</td>
                             <td >
-                                <asp:TextBox ID="txtcatid" runat="server" Width="163px" CssClass="auto-style1"></asp:TextBox>
+                                <asp:TextBox ID="txtCategory" runat="server" Width="163px" CssClass="auto-style1"></asp:TextBox>
                             </td>                            
                         </tr>  
                         <tr>
                             <td class="auto-style2"></td>
-                            <td><asp:Button ID="add" runat="server" CssClass="btn_design" Text="Add" OnClick="addcategory_Click"  /></td>
+                            <td><asp:Button ID="add" runat="server" CssClass="btn_design" Text="Add" OnClick="addcategory_Click"  />
+                                <asp:Label ID="dataSaved" runat="server"></asp:Label>
+                            </td>
                         </tr>
                     </table>
                     
                 </div>
                 <div class="bottom_bottom">
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="categoryid" DataSourceID="SqlDataSource1">
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="categoryid" DataSourceID="SqlDataSource1" OnRowEditing="GridView1_RowEditing">
                         <Columns>
                             
                             <asp:BoundField DataField="categoryid" HeaderText="categoryid" ReadOnly="True" SortExpression="categoryid" />

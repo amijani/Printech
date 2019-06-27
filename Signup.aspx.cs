@@ -19,26 +19,6 @@ namespace Printech_Project
         {
 
         }
-
-        protected void signup_Click(object sender, EventArgs e)
-        {
-            SqlConnection con = new SqlConnection(cnstring);
-            con.Open();
-            if (con.State == System.Data.ConnectionState.Open)
-            {
-
-                string a = "insert into registration (userid,firstname,lastname,username,password)values ('" + userid.Text.ToString() + "','"
-                                    + fname.Text.ToString() + "','" + lname.Text.ToString() + "','" + uname.Text.ToString() + "','"
-                                    + pwd.Text.ToString() + "')";
-                SqlCommand cmd = new SqlCommand(a, con);
-                cmd.ExecuteNonQuery();
-                Response.Write("Data inserted Successfully");
-                Response.Redirect("login.aspx");
-
-            }
-            
-        }
-
         protected void Button1_Click(object sender, EventArgs e)
         {
             bool ishuman = CaptchaBox.Validate(textCaptcha.Text);
@@ -57,7 +37,30 @@ namespace Printech_Project
 
         }
 
-       
+        protected void signup_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(cnstring);
+            con.Open();
+            if (con.State == System.Data.ConnectionState.Open)
+            {
+
+                string a = "insert into registration (userid,firstname,lastname,username,password,confirmpwd)values ('" + userid.Text.ToString() + "','"
+                                    + fname.Text.ToString() + "','" + lname.Text.ToString() + "','" + uname.Text.ToString() + "','"
+                                    + pwd.Text.ToString() + "','"+cpwd.Text.ToString()+ "')";
+                SqlCommand cmd = new SqlCommand(a, con);
+                cmd.ExecuteNonQuery();
+                Response.Write("Registration completed");
+                
+
+            }
+            Response.Redirect("login.aspx");
+            con.Close();
+
+        }
+
+
+
+
     }
 }
 

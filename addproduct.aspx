@@ -53,7 +53,7 @@
                                 <asp:Label ID="Label1" runat="server" Text="Category"></asp:Label>
                             </td>
                             <td class="auto-style1">
-                                <asp:DropDownList ID="catid" runat="server" Height="16px" Width="165px">
+                                <asp:DropDownList ID="catname" runat="server" Height="16px" Width="165px" DataSourceID="SqlDataSource2" DataTextField="categoryname" DataValueField="categoryname" >
                                 </asp:DropDownList>
                             </td>  
                             <td>
@@ -75,10 +75,23 @@
                                 <asp:TextBox ID="txtcatid" runat="server" Width="165px"></asp:TextBox>
                             </td>   
                             <td>
-                                <asp:Label ID="Label4" runat="server" Text="Product ID"></asp:Label>
+                                <asp:Label ID="Label6" runat="server" Text="Available Quantity"></asp:Label>
                             </td>
                             <td>
-                                <asp:TextBox ID="txtproid" runat="server" Width="165px"></asp:TextBox>
+                                <asp:DropDownList ID="avaquantity" runat="server" Height="20px" Width="45px"  >
+                                    <asp:ListItem>1</asp:ListItem>
+                                    <asp:ListItem>2</asp:ListItem>
+                                    <asp:ListItem>3</asp:ListItem>
+                                    <asp:ListItem>4</asp:ListItem>
+                                    <asp:ListItem>5</asp:ListItem>
+                                    <asp:ListItem>6</asp:ListItem>
+                                    <asp:ListItem>7</asp:ListItem>
+                                    <asp:ListItem>8</asp:ListItem>
+                                    <asp:ListItem>9</asp:ListItem>
+                                    <asp:ListItem>10</asp:ListItem>
+                                    <asp:ListItem>11</asp:ListItem>
+                                    <asp:ListItem>12</asp:ListItem>
+                                </asp:DropDownList>
                             </td>
                         </tr>  
                         <tr>
@@ -86,21 +99,21 @@
                                 <asp:Label ID="Label5" runat="server" Text="Sales Price"></asp:Label>
                             </td>
                             <td class="auto-style1">
-                                <asp:TextBox ID="TextBox2" runat="server" Width="165px"></asp:TextBox>
+                                <asp:TextBox ID="salesPrice" runat="server" Width="165px"></asp:TextBox>
                             </td>
                             <td>
-                                <asp:Label ID="Label6" runat="server" Text="Available Quantity"></asp:Label>
+                                <asp:Button ID="Button1" runat="server" CssClass="btn_design" Text="Add" OnClick="add_Click"  />
                             </td>
                             <td>
-                                <asp:DropDownList ID="avaquantity" runat="server" Height="20px" Width="165px">
-                                </asp:DropDownList>
+                                <asp:Label ID="productSaved" runat="server"></asp:Label>
                             </td>
                         </tr>
                         <tr>
                             <td></td>
                             <td class="auto-style1"></td>
-                            <td></td>
-                            <td ><asp:Button ID="Button1" runat="server" CssClass="btn_design" Text="Add"  /></td>
+                            <td>
+                                &nbsp;</td>
+                            <td >&nbsp;</td>
                             
                         </tr>
                     </table>
@@ -126,6 +139,7 @@
                             <asp:Parameter Name="productid" Type="String" />
                         </UpdateParameters>
                     </asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:PrintechConnectionString %>" SelectCommand="SELECT [categoryname] FROM [category]"></asp:SqlDataSource>
                     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="productid" DataSourceID="SqlDataSource1">
                         <Columns>
                             
