@@ -75,7 +75,7 @@
                             <asp:Parameter Name="productid" Type="String" />
                         </UpdateParameters>
                     </asp:SqlDataSource>
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="productid" DataSourceID="SqlDataSource1">
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="productid" DataSourceID="SqlDataSource1" OnRowEditing="GridView1_RowEditing" >
                         <Columns>
                             
                             <asp:BoundField DataField="productid" HeaderText="productid" ReadOnly="True" SortExpression="productid" />

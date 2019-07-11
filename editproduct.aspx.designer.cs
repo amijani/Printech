@@ -40,13 +40,22 @@ namespace ap_project {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// catid control.
+        /// category control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList catid;
+        protected global::System.Web.UI.WebControls.DropDownList category;
+        
+        /// <summary>
+        /// require_upcatid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator require_upcatid;
         
         /// <summary>
         /// Label3 control.
@@ -58,13 +67,22 @@ namespace ap_project {
         protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
-        /// txtproname control.
+        /// proname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtproname;
+        protected global::System.Web.UI.WebControls.TextBox proname;
+        
+        /// <summary>
+        /// require_upproname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator require_upproname;
         
         /// <summary>
         /// Label2 control.
@@ -76,13 +94,22 @@ namespace ap_project {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// txtcatid control.
+        /// proid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtcatid;
+        protected global::System.Web.UI.WebControls.TextBox proid;
+        
+        /// <summary>
+        /// require_upproid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator require_upproid;
         
         /// <summary>
         /// Label6 control.
@@ -94,13 +121,22 @@ namespace ap_project {
         protected global::System.Web.UI.WebControls.Label Label6;
         
         /// <summary>
-        /// avaquantity control.
+        /// quantity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList avaquantity;
+        protected global::System.Web.UI.WebControls.DropDownList quantity;
+        
+        /// <summary>
+        /// require_upavaquantity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator require_upavaquantity;
         
         /// <summary>
         /// Label5 control.
@@ -112,13 +148,22 @@ namespace ap_project {
         protected global::System.Web.UI.WebControls.Label Label5;
         
         /// <summary>
-        /// TextBox2 control.
+        /// salesp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox salesp;
+        
+        /// <summary>
+        /// require_upsalesp control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator require_upsalesp;
         
         /// <summary>
         /// pro_update control.
@@ -128,6 +173,15 @@ namespace ap_project {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button pro_update;
+        
+        /// <summary>
+        /// updatemessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label updatemessage;
         
         /// <summary>
         /// pro_cancel control.
@@ -146,6 +200,15 @@ namespace ap_project {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GridView1;
+        
+        /// <summary>
+        /// SqlDataSource2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
         
         /// <summary>
         /// SqlDataSource1 control.

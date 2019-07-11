@@ -49,7 +49,7 @@
                          <asp:Button ID="addcategory" runat="server" Text="Add Category" CssClass="btn_design" OnClick="addcategory_Click" />
                     </div>
                     <div class="btn_right">
-                <asp:Button ID="addproduct" runat="server" Text="Add Product" BackColor="#F6A845" CssClass="btn_design" OnClick="addproduct_Click" />
+                <asp:Button ID="addproduct" runat="server" Text="Add Product" CssClass="btn_design" OnClick="addproduct_Click" />
                         </div>
                     </div>
             </div>

@@ -18,5 +18,10 @@ namespace ap_project
         {
             Response.Redirect("addproduct.aspx");
         }
+
+        protected void GridView1_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            Response.Redirect("editproduct.aspx");
+        }
     }
 }

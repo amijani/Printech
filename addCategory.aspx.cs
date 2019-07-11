@@ -37,6 +37,7 @@ namespace ap_project
         protected void GridView1_RowEditing(object sender, GridViewEditEventArgs e)
         {
             Response.Redirect("editcategory.aspx");
+
         }
     }
 }

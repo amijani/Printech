@@ -57,6 +57,7 @@
                                 :</td>
                             <td>
                                 <asp:TextBox ID="category_id" runat="server" Width="162px"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="require_category" runat="server" ControlToValidate="category_id" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                             </td>                            
                         </tr>
                         <tr>
@@ -65,6 +66,7 @@
                                 :</td>
                             <td >
                                 <asp:TextBox ID="txtCategory" runat="server" Width="163px" CssClass="auto-style1"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="require_catname" runat="server" ControlToValidate="txtCategory" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                             </td>                            
                         </tr>  
                         <tr>
