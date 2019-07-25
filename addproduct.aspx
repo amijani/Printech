@@ -11,11 +11,15 @@
             width: 284px;
         }
         .auto-style2 {
-            margin-top: 95px;
-            width: 6%;
-            float: left;
-            height: 100%;
-            background-color: #7f7f7f;
+           margin-top: 95px;
+    width: 6%;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 6px;
+    padding-right: 5px;
+    float: left;
+    height: 100%;
+    background-color: #0000007a;
         }
         .auto-style3 {
             height: 35px;
@@ -46,12 +50,14 @@
                      <h1 style="text-align:center;">PRINTECH</h1>
                 </div>
                 <div class="logout">
-                    <a href="login.aspx" style="color:#ffffff;" >Logout</a>
+                    <a href="login.aspx" style="color:#ffffff;" ><h2>Logout </h2></a>
                 </div>
             </div>
             <div class="addcategory_bottom">
                 <div class="bottom_top">
-                    <h2>Add Product</h2>
+                    <h2 style="
+    margin-left: 70px;
+">Add Product</h2>
                 </div>
                 <div class="bottom_middle">
                     <table style="width:100%; border-spacing:15px;">

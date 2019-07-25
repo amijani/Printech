@@ -12,14 +12,14 @@
             width: 6%;
             float: left;
             height: 100%;
-            background-color: #7f7f7f;
+            background-color: #0300005c;
         }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
        <div class="auto-style1">
-            <div class="menu">
+            <div class="menu" style="padding: 10px 10px 10px 10px;">
                 <asp:Menu ID="Menu1" runat="server"  ForeColor="White" CssClass="menu" OnMenuItemClick="Menu1_MenuItemClick" >
                 
                 <Items>
@@ -36,12 +36,15 @@
                      <h1 style="text-align:center;">PRINTECH</h1>
                 </div>
                 <div class="logout">
-                    <a href="login.aspx" style="color:#ffffff;" >Logout</a>
+                    <a href="login.aspx" style="color:#ffffff;" ><h2>Logout </h2> </a>
                 </div>
             </div>
             <div class="addcategory_bottom">
                 <div class="bottom_top">
-                    <h2>Edit Product</h2>
+                   <h2 style="
+    padding-left: 51px;
+    padding-right: 56px;
+">Edit Product</h2>
                 </div>
                 <div class="bottom_middle">
                     <table style="width:100%; border-spacing:15px;">
@@ -143,7 +146,7 @@
                         <RowStyle CssClass="gridviewrow" />
                     </asp:GridView>
                     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:PrintechConnectionString %>" SelectCommand="SELECT [categoryname] FROM [category]"></asp:SqlDataSource>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PrintechConnectionString %>" DeleteCommand="DELETE FROM [product] WHERE [productid] = @productid" InsertCommand="INSERT INTO [product] ([productid], [productname], [salesprice], [availablequantity], [categoryname]) VALUES (@productid, @productname, @salesprice, @availablequantity, @categoryname)" SelectCommand="SELECT * FROM [product]" UpdateCommand="UPDATE [product] SET [productname] = @productname, [salesprice] = @salesprice, [availablequantity] = @availablequantity, [categoryname] = @categoryname WHERE [productid] = @productid">
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PrintechConnectionString %>" DeleteCommand="DELETE FROM [product] WHERE [productid] = @productid" >
                         <DeleteParameters>
                             <asp:Parameter Name="productid" Type="String" />
                         </DeleteParameters>

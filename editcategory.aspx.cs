@@ -12,28 +12,11 @@ namespace ap_project
     public partial class editcategory : System.Web.UI.Page
     {
         public string cnstring = "Data Source=desktop-ja2gbnt\\sqlexpress;Initial Catalog=Printech;Integrated Security=True";
-        //string categoryId = " ";
+        
         protected void Page_Load(object sender, EventArgs e)
         {
-            //categoryId = Convert.ToString(Request.QueryString["categoryid"]);
-            //if (!IsPostBack)
-            //{
-            //    BindTextBoxvalues();
-            //}
-
+           
         }
-
-        //private void BindTextBoxvalues()
-        //{
-            
-        //    SqlConnection con = new SqlConnection(cnstring);
-        //    SqlCommand cmd = new SqlCommand("select * from category where categoryid=" + categoryId, con);
-        //    DataTable dt = new DataTable();
-        //    SqlDataAdapter da = new SqlDataAdapter(cmd);
-        //    da.Fill(dt);
-        //    txtcatid.Text = dt.Rows[0][0].ToString();
-        //    txtCategory.Text = dt.Rows[0][1].ToString();
-        //}
 
         protected void cancel_Click(object sender, EventArgs e)
         {

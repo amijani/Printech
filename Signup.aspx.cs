@@ -19,24 +19,7 @@ namespace Printech_Project
         {
 
         }
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            bool ishuman = CaptchaBox.Validate(textCaptcha.Text);
-            textCaptcha.Text = null;
-            if (!ishuman)
-            {
-                Labelmsg.ForeColor = System.Drawing.Color.Red;
-                Labelmsg.Text = "InValid";
-            }
-            else
-            {
-                Labelmsg.ForeColor = System.Drawing.Color.Green;
-                Labelmsg.Text = "Valid";
-            }
-
-
-        }
-
+       
         protected void signup_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(cnstring);
@@ -58,6 +41,22 @@ namespace Printech_Project
 
         }
 
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            bool ishuman = CaptchaBox.Validate(textCaptcha.Text);
+            textCaptcha.Text = null;
+            if (!ishuman)
+            {
+                Labelmsg.ForeColor = System.Drawing.Color.Red;
+                Labelmsg.Text = "InValid";
+            }
+            else
+            {
+                Labelmsg.ForeColor = System.Drawing.Color.Green;
+                Labelmsg.Text = "Valid";
+            }
+            
+        }
 
 
 

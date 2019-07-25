@@ -33,12 +33,7 @@ namespace ap_project
             }
 
         }
-
-        protected void avaquantity_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        
         protected void GridView1_RowEditing(object sender, GridViewEditEventArgs e)
         {
             Response.Redirect("editproduct.aspx");

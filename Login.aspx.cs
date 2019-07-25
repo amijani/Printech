@@ -23,18 +23,6 @@ namespace Printech_Project
 
         protected void lgn_Click(object sender, EventArgs e)
         {
-            //SqlConnection con = new SqlConnection(cnstring);
-            //con.Open();
-            //if (con.State == System.Data.ConnectionState.Open)
-            //{
-
-            //    string a = "insert into login (username,password)values ('" + username.Text.ToString() + "','"
-            //                        + password.Text.ToString() + "')";
-            //    SqlCommand cmd = new SqlCommand(a, con);
-            //    cmd.ExecuteNonQuery();
-            //    Response.Write("Data inserted Successfully");
-            //    Response.Redirect("main.aspx");
-            //}
             SqlConnection con = new SqlConnection(cnstring);
             con.Open();
             string a = "select count(1) from registration where username=@username AND password=@password";

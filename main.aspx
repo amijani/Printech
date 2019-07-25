@@ -9,10 +9,14 @@
     <style type="text/css">
         .auto-style1 {
             margin-top: 95px;
-            width: 6%;
-            float: left;
-            height: 100%;
-            background-color: #7f7f7f;
+    width: 6%;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 6px;
+    padding-right: 5px;
+    float: left;
+    height: 100%;
+    background-color: #0000007a;;
         }
     </style>
 </head>
@@ -37,12 +41,14 @@
                 <h1 style="text-align:center;">PRINTECH</h1>
             </div>
             <div class="logout">
-                <a href="login.aspx" style="color:#ffffff;" >Logout</a>
+                <a href="login.aspx" style="color:#ffffff;" ><h2>Logout</h2></a>
             </div>
            </div>
             <div class="buttons">
                 <div class="btn_txt">
-                <h2>Inventory Details</h2>
+                <h2 style="
+    margin-left: 68px;
+">Inventory Details</h2>
                     </div>
                 <div class="btn_btn">
                     <div class="btn_left">

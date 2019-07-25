@@ -8,11 +8,15 @@
     <link href="css/printech.css" rel="stylesheet" />
     <style type="text/css">
         .auto-style1 {
-            margin-top: 95px;
-            width: 6%;
-            float: left;
-            height: 100%;
-            background-color: #7f7f7f;
+                margin-top: 95px;
+    width: 6%;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 6px;
+    padding-right: 5px;
+    float: left;
+    height: 100%;
+    background-color: #0000007a;
         }
     </style>
 </head>
@@ -36,16 +40,16 @@
                     <h1 style="text-align: center;">PRINTECH</h1>
                 </div>
                 <div class="logout">
-                    <a href="login.aspx" style="color: #ffffff;">Logout</a>
+                    <a href="login.aspx" style="color: #ffffff;"><h2> Logout </h2></a>
                 </div>
             </div>
             <div class="addcategory_bottom">
                 <div class="cat_middle">
                     <table style="width: 100%;">
                         <tr>
-                            <td>
+                              <td>
                                 <div class="cat_mid_left">
-                                    <h2>Category List</h2>
+                                    <h2 style=" margin-left: 79px;">Category List</h2>
                                 </div>
                             </td>
                             <td>
@@ -56,7 +60,7 @@
                     </table>
                 </div>
 
-                <div class="bottom_bottom">
+                <div class="bottom_bottom" style="border-collapse:collapse;margin-left: 74px;">
                     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="categoryid" DataSourceID="SqlDataSource1" OnRowEditing="GridView1_RowEditing">
                         <Columns>
                             <asp:BoundField DataField="categoryid" HeaderText="categoryid" ReadOnly="True" SortExpression="categoryid" />
